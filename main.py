@@ -1,4 +1,3 @@
-
 # 1 Завдання (Декілька варіантів вирішення)
 
 # Варіант 1.0
@@ -12,21 +11,21 @@
 # print('Завдання 1.2 рази)
 # print('I love Python\n' * number)
 
-# Варіант 1.2, замість 4 можна будь-яке число
-print('I love Python\n' * 4)
+# Варіант 1.2, замість 42 можна будь-яке число
+print('I love Python\n' * 42)
 
 
 # 2 Завдання
 
-age_in_month = (12 * 26)
+age_in_month = 12 * 26
 print('Вік в місяцях:', age_in_month)
 # print('Тип данних:', type(age_in_month))
 
 
 # 3 Завдання
 
-age_in_years = (age_in_month/12)
-age_in_years = str(age_in_years)
+age_in_years = age_in_month/12
+age_in_years = int(age_in_years)
 print('Вік в роках:', age_in_years)
 
 
@@ -39,7 +38,7 @@ print('Вік в роках:', age_in_years)
 # my_age = (tx_names + tx_who + age_in_years + tx_years)
 
 # Зручний варіант
-my_age = 'Му name is Anton I`m ' + age_in_years + ' years old'
+my_age = 'Му name is Anton I`m ' + str(age_in_years) + ' years old'
 print(my_age)
 
 
@@ -47,19 +46,19 @@ print(my_age)
 # Бачив в обговреннях на ютуб що змінні які не міняються -
 # - під час життя проекту прийнято писати з велкиої літери
 
-N = 1
-# result_1 = N < 2
-# result_2 = N == 4
-# result_3 = N <= 1
-# result_4 = N > 1.5
-# result_5 = N != 5
+nums = 1
+# result_1 = nums < 2
+# result_2 = nums == 4
+# result_3 = nums <= 1
+# result_4 = nums > 1.5
+# result_5 = nums != 5
 
 # Більш простий варіант зробити порівняння відразу в "Прінт"
-print((N < 2, 'N < 2'),
-      (N == 4, 'N == 4'),
-      (N <= 1, 'N <= 1'),
-      (N > 1.5, "N > 1.5"),
-      (N != 5, 'N != 5'),
+print((nums < 2, 'nums < 2'),
+      (nums == 4, 'nums == 4'),
+      (nums <= 1, 'nums <= 1'),
+      (nums > 1.5, "nums > 1.5"),
+      (nums != 5, 'nums != 5'),
       sep='\n')
 
 
@@ -74,6 +73,6 @@ print('Змінна d:', var_d)
 print('Тип змінної d:', type(var_d))
 
 
-# etc.
+# etc
 print()
 print('Дякую за увагу^^')
