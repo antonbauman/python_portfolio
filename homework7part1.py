@@ -27,23 +27,21 @@ while True:
 # Додати нового користувача
 
     elif command == 'add':
-        while True:
-            '''
-            цикл завершиться в разі спроби додати існуючий контакт
-            '''
-            user = input('Enter a name user: ')
-            if user in phone_dict:
-                print(f'{user} is already in the phonebook\nChange request')
-                break
+        user = input('Enter a name user: ')
+        if user in phone_dict:
+            print(f'{user} is already in the phonebook\nChange request')
+        else:
             number = input(f'Enter a number {user}: ')
             add_dict = {user: number}
             phone_dict.update(add_dict)
-            break
 # Видалити користувача
     elif command == 'del':
         remove = input('Enter a name user: ')
-        del phone_dict[remove]
-        print(f'{remove} has been deleted from the phonebook')
+        if remove in phone_dict:
+            del phone_dict[remove]
+            print(f'{remove} has been deleted from the phonebook')
+        else:
+            print(f'User {remove} not found\nChange request')
 # Показати весь список контактів
     elif command == 'list':
         for key, value in phone_dict.items():
