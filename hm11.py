@@ -1,4 +1,4 @@
-import pytz
+# import pytz
 from datetime import datetime
 
 # Дата та час
@@ -37,26 +37,28 @@ except MyCustomException as a:
 
 print()
 
-# Виведення 10-ти = преред і після блоку коду через контекст менеджер
 class MyContextManager:
     def __enter__(self):
         print("=" * 10)
 
     def __exit__(self, exc_type, exc_val, exc_tb):
+        if exc_val:
+            print("An exception:", exc_val)
         print("=" * 10)
+        return True
 
 with MyContextManager():
-    print("Smth. code")
+    print("Some code")
 
 print()
 
-# Виведення 10-ти = преред і після блоку коду через try ... except
 try:
     print("="*10)
-    print("This is some code that will be executed.")
+    print("Some code")
+    raise ValueError("Something wrong")
 except Exception as e:
     print("An exception occurred:", e)
 else:
     print("="*10)
 finally:
-    None
+    print("="*10)
