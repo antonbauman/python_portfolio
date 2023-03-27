@@ -1,0 +1,6 @@
+Function 'my_function' called at 2023-03-27 22:37:44.340413
+Function 'my_function' called at 2023-03-27 22:40:22.074508
+Function 'my_function' called at 2023-03-27 22:43:18.478937
+Function 'my_function' called at 2023-03-27 22:47:59.050007
+Function 'my_function' called at 2023-03-27 22:49:41.816309
+Function 'my_function' called at 2023-03-27 22:50:15.226586
